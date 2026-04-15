@@ -1,0 +1,67 @@
+:root {
+    --bg-color: #f4f1ea; /* 复古米浆色 */
+    --text-color: #2c3e50;
+    --accent-color: #8e44ad;
+    --border-color: #d3d3d3;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Constantia", "Lucida Bright", "Palatino", "Georgia", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 5px 5px 0px var(--border-color);
+}
+
+h1 { text-transform: uppercase; letter-spacing: 3px; border-bottom: 2px solid var(--text-color); padding-bottom: 10px; }
+.subtitle { font-style: italic; margin-top: -10px; color: #666; }
+
+.screen { text-align: center; }
+
+button {
+    background: transparent;
+    border: 1px solid var(--text-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+button:hover:not(:disabled) {
+    background: var(--text-color);
+    color: white;
+}
+
+button:disabled { border-color: #ccc; color: #ccc; cursor: not-allowed; }
+
+.progress-bar { width: 100%; height: 4px; background: #eee; margin-bottom: 2rem; }
+#progress { height: 100%; background: var(--text-color); width: 0%; transition: width 0.3s; }
+
+#options { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+.option-btn { text-align: left; width: 100%; margin: 0; }
+.option-btn.selected { background: #eee; border-width: 2px; }
+
+.result-box { text-align: left; line-height: 1.6; border-top: 1px solid #eee; padding-top: 20px; }
+
+#creature-visual {
+    width: 100px; height: 100px; margin: 20px auto;
+    border-radius: 50%; border: 2px dashed #ccc;
+}
+
+.concept-toggle { margin-top: 20px; padding: 10px; background: #fafafa; font-size: 0.9rem; }
+#concept-detail { padding: 10px; color: #555; font-style: italic; }
+
+input { padding: 8px; border: 1px solid #ccc; width: 80%; margin-bottom: 10px; text-align: center; }

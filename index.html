@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoCreature | 几何生物测试</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-screen" class="screen">
+            <h1>GeoCreature</h1>
+            <p class="subtitle">测测你是什么几何生物</p>
+            <p class="intro-text">睁开眼，你降生到了一片神秘的原野... 准备好探索你的数学本质了吗？</p>
+            <button onclick="startQuiz()">进入原野</button>
+        </div>
+
+        <div id="quiz-screen" class="screen" style="display: none;">
+            <div class="progress-bar"><div id="progress"></div></div>
+            <div id="question-container">
+                <p id="question-text"></p>
+                <div id="options"></div>
+            </div>
+            <div class="controls">
+                <button id="prev-btn" onclick="prevQuestion()" disabled>上一题</button>
+                <button id="next-btn" onclick="nextQuestion()" disabled>下一题</button>
+            </div>
+        </div>
+
+        <div id="input-screen" class="screen" style="display: none;">
+            <h2 style="margin-top: 0;">最后的时空映射</h2>
+            <p class="intro-text">原野的能量正在汇聚。为了完成最后的测试，请提供两个关键常数：</p>
+            
+            <div style="margin: 30px 0; text-align: left; display: inline-block;">
+                <label>1. 你直觉喜欢的整数 (0-999):</label><br>
+                <input type="number" id="num1" placeholder="例如：42" style="width: 100%; margin-bottom: 20px;"><br>
+                
+                <label>2. 一个代表你的数字 (可以是小数):</label><br>
+                <input type="number" id="num2" step="0.01" placeholder="例如：3.14">
+            </div>
+
+            <button onclick="showResult()" style="display: block; margin: 20px auto;">查看我的几何形态</button>
+        </div>
+
+        <div id="result-screen" class="screen" style="display: none;">
+            <h2 id="creature-title"></h2>
+            <div class="image-placeholder">
+                <div id="creature-visual"></div>
+                <p style="font-size: 0.8rem; color: #777;">[几何生物映射成像]</p>
+            </div>
+            
+            <div class="result-box">
+                <p><strong>数学构成：</strong> <span id="math-core"></span></p>
+                <p><strong>生活空间：</strong> <span id="life-space"></span></p>
+                <hr>
+                <p id="persona-text"></p>
+                <p><strong>灵魂曲率：</strong> <span id="curvature-val"></span></p>
+                <p><strong>专属色：</strong> <span id="color-hex"></span></p>
+            </div>
+
+            <div class="concept-toggle">
+                <button onclick="toggleConcept()">什么是 <span id="concept-name"></span>？</button>
+                <div id="concept-detail" style="display: none;">
+                    <p id="concept-desc"></p>
+                </div>
+            </div>
+
+            <button onclick="location.reload()">重新降生</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
