@@ -247,7 +247,7 @@ function selectOption(idx) {
     //自动跳转：设置 400 毫秒的延迟，让用户视觉上有个反馈
     setTimeout(() => {
         nextQuestion();
-    }, 900);
+    }, 1000);
 }
 
 function nextQuestion() {
