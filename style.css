@@ -52,7 +52,10 @@ button:disabled { border-color: #ccc; color: #ccc; cursor: not-allowed; }
 
 #options { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
 .option-btn { text-align: left; width: 100%; margin: 0; }
-.option-btn.selected { background: #eee; border-width: 2px; }
+.option-btn.selected { background: var(--text-color) !important; /* 强制背景变黑 */
+    color: white !important;                 /* 文字变白 */
+    box-shadow: 2px 2px 0px var(--border-color); /* 保持复古阴影感 */
+}
 
 .result-box { text-align: left; line-height: 1.6; border-top: 1px solid #eee; padding-top: 20px; }
 
