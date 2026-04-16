@@ -39,16 +39,16 @@ const creatureProfiles = {
     Weierstrass: {
         title: "繁花守望者 (The Weierstrass Flora)",
         vector: [0.8, 0.8, 0.0, 0.5],
-        core: "处处不可导（但连续）的分形曲线",
+        core: "分形曲线 / 处处连续而不可导",
         space: "非整数维空间",
-        persona: "你拥有无限的细节美与自相似的结构。普通人看一眼就略过，你却能在微小的转折中发现层层嵌套的宏大宇宙。",
+        persona: "你的内心如同Weierstrass函数，由无限叠加的不同频率波构成。你拥有无限的细节美与自相似的结构，普通人看一眼就略过，你却能在微小的转折中发现层层嵌套的宏大宇宙。",
         concept: "分形 (Fractal)",
         desc: "分形具有自相似性，无论放大多少倍其结构依然复杂。这代表了一种在细节中寻找无穷规律的思维方式。"
     },
     Dirichlet: {
         title: "云端漫步者 (The Dirichlet Cloud)",
         vector: [0.2, 0.7, 0.0, 0.9],
-        core: "处处不连续的稠密函数",
+        core: "稠密函数 / 处处不连续",
         space: "希尔伯特空间",
         persona: "你是一片狄利克雷函数的云海，灵动而神秘。你的思维具有量子般的跳跃美，在不同的频率间闪烁，让常人难以捉摸却又心生向往。",
         concept: "希尔伯特空间",
@@ -245,9 +245,9 @@ function selectOption(idx) {
     userAnswers[currentIdx] = idx;
     showQuestion();     //重新渲染，让用户看到选中的变黑效果
     //自动跳转：设置 400 毫秒的延迟，让用户视觉上有个反馈
-    setTimeout(() => {
-        nextQuestion();
-    }, 1000);
+    // setTimeout(() => {
+    //     nextQuestion();
+    // }, 1000);
 }
 
 function nextQuestion() {
