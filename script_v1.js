@@ -2,7 +2,6 @@
 const creatureProfiles = {
     Singleton: {
         title: "星火拓荒者 (The Singleton)",
-        illustration: "images/singleton.png",
         vector: [0.1, 0.1, 0.8, 0.9],
         core: "孤立点 / 离散拓扑",
         space: "平凡的度量空间",
@@ -12,7 +11,6 @@ const creatureProfiles = {
     },
     PerfectBall: {
         title: "圆满哲学家 (The Perfect Ball)",
-        illustration: "images/perfect_ball.png",
         vector: [0.9, 0.1, 1.0, 0.9],
         core: "L2 范数下的单位球",
         space: "黎曼流形",
@@ -22,7 +20,6 @@ const creatureProfiles = {
     },
     FilledTorus: {
         title: "琥珀藏心者 (The Filled Torus)",
-        illustration: "images/filled_torus.png",
         vector: [0.8, 0.2, 0.8, 0.1],
         core: "非单连通的拓扑结构",
         space: "三维欧氏空间",
@@ -32,7 +29,6 @@ const creatureProfiles = {
     },
     Manhattan: {
         title: "秩序建筑师 (The Manhattan Cube)",
-        illustration: "images/manhattan.png",
         vector: [0.4, 0.1, 0.2, 0.8],
         core: "L1 范数下的单位球",
         space: "赋范线性空间",
@@ -42,7 +38,6 @@ const creatureProfiles = {
     },
     Weierstrass: {
         title: "繁花守望者 (The Weierstrass Flora)",
-        illustration: "images/weierstrass.png",
         vector: [0.8, 0.8, 0.0, 0.5],
         core: "分形曲线 / 处处连续而不可导",
         space: "非整数维空间",
@@ -52,7 +47,6 @@ const creatureProfiles = {
     },
     Dirichlet: {
         title: "云端漫步者 (The Dirichlet Cloud)",
-        illustration: "images/dirichlet.png",
         vector: [0.2, 0.7, 0.0, 0.9],
         core: "稠密函数 / 处处不连续",
         space: "希尔伯特空间",
@@ -62,7 +56,6 @@ const creatureProfiles = {
     },
     Mobius: {
         title: "无尽衔尾蛇 (The Mobius Loop)",
-        illustration: "images/mobius.png",
         vector: [0.9, 0.7, 0.9, 1.0],
         core: "单侧曲面 / 紧致流形",
         space: "不可定向流形",
@@ -72,7 +65,6 @@ const creatureProfiles = {
     },
     LightCone: {
         title: "极光观测者 (The Light Cone)",
-        illustration: "images/light_cone.png",
         vector: [0.9, 1.0, 0.9, 0.5],
         core: "光锥结构的时空流形",
         space: "闵可夫斯基时空",
@@ -340,10 +332,6 @@ function showResult() {
     document.getElementById('result-screen').style.display = 'block';
 
     document.getElementById('creature-title').innerText = result.title;
-
-    // 新增：填充插画路径
-    document.getElementById('creature-illustration').src = result.illustration;
-
     document.getElementById('math-core').innerText = result.core;
     document.getElementById('life-space').innerText = result.space;
     document.getElementById('persona-text').innerText = result.persona;
@@ -351,8 +339,8 @@ function showResult() {
     document.getElementById('curvature-val').innerText = curvature + curvatureDesc;
     document.getElementById('color-hex').innerText = `HSL(${hue}, 55, 65)`;
 
-    // 修改：将颜色填充到圆形中
-    const visual = document.getElementById('creature-visual-tiny');
+    // 给视觉展示框上色
+    const visual = document.getElementById('creature-visual');
     visual.style.backgroundColor = color;
     visual.style.boxShadow = `0 0 20px ${color}`;
 

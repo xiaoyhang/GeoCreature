@@ -1,5 +1,6 @@
 :root {
-    --bg-color: #f4f1ea; /* 复古米浆色 */
+    --bg-color: #f4f1ea;
+    /* 复古米浆色 */
     --text-color: #2c3e50;
     --accent-color: #8e44ad;
     --border-color: #d3d3d3;
@@ -25,10 +26,22 @@ body {
     box-shadow: 5px 5px 0px var(--border-color);
 }
 
-h1 { text-transform: uppercase; letter-spacing: 3px; border-bottom: 2px solid var(--text-color); padding-bottom: 10px; }
-.subtitle { font-style: italic; margin-top: -10px; color: #666; }
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 10px;
+}
 
-.screen { text-align: center; }
+.subtitle {
+    font-style: italic;
+    margin-top: -10px;
+    color: #666;
+}
+
+.screen {
+    text-align: center;
+}
 
 button {
     background: transparent;
@@ -45,26 +58,117 @@ button:hover:not(:disabled) {
     color: white;
 }
 
-button:disabled { border-color: #ccc; color: #ccc; cursor: not-allowed; }
-
-.progress-bar { width: 100%; height: 4px; background: #eee; margin-bottom: 2rem; }
-#progress { height: 100%; background: var(--text-color); width: 0%; transition: width 0.3s; }
-
-#options { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
-.option-btn { text-align: left; width: 100%; margin: 0; }
-.option-btn.selected { background: var(--text-color) !important; /* 强制背景变黑 */
-    color: white !important;                 /* 文字变白 */
-    box-shadow: 2px 2px 0px var(--border-color); /* 保持复古阴影感 */
+button:disabled {
+    border-color: #ccc;
+    color: #ccc;
+    cursor: not-allowed;
 }
 
-.result-box { text-align: left; line-height: 1.6; border-top: 1px solid #eee; padding-top: 20px; }
-
-#creature-visual {
-    width: 100px; height: 100px; margin: 20px auto;
-    border-radius: 50%; border: 2px dashed #ccc;
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: #eee;
+    margin-bottom: 2rem;
 }
 
-.concept-toggle { margin-top: 20px; padding: 10px; background: #fafafa; font-size: 0.9rem; }
-#concept-detail { padding: 10px; color: #555; font-style: italic; }
+#progress {
+    height: 100%;
+    background: var(--text-color);
+    width: 0%;
+    transition: width 0.3s;
+}
 
-input { padding: 8px; border: 1px solid #ccc; width: 80%; margin-bottom: 10px; text-align: center; }
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.option-btn {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+.option-btn.selected {
+    background: var(--text-color) !important;
+    /* 强制背景变黑 */
+    color: white !important;
+    /* 文字变白 */
+    box-shadow: 2px 2px 0px var(--border-color);
+    /* 保持复古阴影感 */
+}
+
+.result-box {
+    text-align: left;
+    line-height: 1.6;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+/* 修改：原来的圆形改为小一点的并列展示 */
+#creature-visual-tiny {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 0px var(--border-color);
+    /* 保持复古阴影 */
+    border: none;
+    transition: background-color 0.5s ease;
+    /* 颜色加载时的过渡效果 */
+}
+
+/* 新增：并列容器 */
+.visual-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* 图片和圆形之间的间距 */
+    margin: 20px 0;
+}
+
+/* 修改：原来的 placeholder 变为只放图片 */
+.image-placeholder {
+    width: 150px;
+    /* 调大一点给图片 */
+    height: 150px;
+    border: none;
+    /* 去掉边框 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 新增：插画样式 */
+#creature-illustration {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* 保持比例 */
+    /* 可以加一点复古的滤镜，比如降低一点饱和度 */
+    filter: sepia(10%) contrast(110%);
+}
+
+
+.concept-toggle {
+    margin-top: 20px;
+    padding: 10px;
+    background: #fafafa;
+    font-size: 0.9rem;
+}
+
+#concept-detail {
+    padding: 10px;
+    color: #555;
+    font-style: italic;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin-bottom: 10px;
+    text-align: center;
+}
