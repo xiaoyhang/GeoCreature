@@ -33,3 +33,22 @@ H (Holiness/Connectivity): 封闭内核(0) vs 开放连通(1)
 ## **科普 Toggle：**
 
 在结果页底部有一个按钮，点击即可展开对该生物背后数学概念的浅显解释。（例如“什么是希尔伯特空间？”）
+
+## **目前已收集到的结果对应**
+1. The Singleton: AA...A
+2. The Perfect Ball: CACA...CA
+3. The Filled Torus: ?
+4. The Manhattan Cube: (rare!)
+    - BABAA ABBCB BCCB
+5. The Weierstrass Flora: 
+    - BBBAAABBB...A
+    - CBCB...CB
+    - BB...B
+6. The Dirichlet Cloud: (quite alot)
+    - ABCABC...ABC
+    - AAACCCAAABBB AAACCC...
+    - and mine, by following intuition.(笑)
+7. The Mobius Loop: ?
+8. The Light Cone: (quite alot)
+    - BCABCA...BCA
+    - CC...C
