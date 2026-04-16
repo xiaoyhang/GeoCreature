@@ -112,8 +112,8 @@ button:disabled {
     width: 100px;
     height: 100px;
     margin: 20px auto;
-    box-shadow: 2px 2px 0px var(--border-color);
-    /* 保持复古阴影 */
+    box-shadow: 2px 2px 0px var(--border-color);    /* 保持复古阴影 */
+    border-radius: 50%;     /* div 默认是方形，改成圆形。*/
     border: none;
     transition: background-color 0.5s ease;
     /* 颜色加载时的过渡效果 */
